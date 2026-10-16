@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Trick Trek Leaderboard</title>
+<meta name="description" content="Top Trick Trek players with the fewest deaths.">
+<link rel="icon" type="image/png" href="favicon.png">
+<style>body{font-family:system-ui,sans-serif;background:#0b1026;color:#fff;max-width:600px;margin:40px auto;padding:0 18px;line-height:1.8}a{color:#ffd166}</style></head>
+<body><h1>Leaderboard</h1><p>Fewest deaths to reach the moon:</p><ol id="list"></ol>
+<p><a href="index.html">Play now</a> · <a href="about.html">About</a></p>
+<script>
+fetch('https://firestore.googleapis.com/v1/projects/trick-trek/databases/(default)/documents:runQuery?key=AIzaSyALX8DwPRGkTxTwX7WHbCQS-baaYpIammM',{method:'POST',body:JSON.stringify({structuredQuery:{from:[{collectionId:'scores'}],orderBy:[{field:{fieldPath:'deaths'},direction:'ASCENDING'}],limit:10}})})
+.then(r=>r.json()).then(a=>{const ol=document.getElementById('list');a.forEach(x=>{if(!x.document)return;const f=x.document.fields,li=document.createElement('li');li.textContent=f.name.stringValue+' - '+f.deaths.integerValue+' deaths';ol.appendChild(li)})}).catch(()=>{document.getElementById('list').textContent='Could not load scores.'})
+</script></body></html>
