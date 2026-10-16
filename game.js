@@ -97,7 +97,7 @@ showBest();
 function start(){if(!getName())return;deaths=0;lvD=0;spN=0;load(0);st='play';ov0.classList.remove('win');ov0.classList.add('hide');if(isTouch)goLandscape();rot();tone(440,440,.01,'sine',.001)}
 btn.onclick=start;
 // DEATH SOUNDS (files live in the "sounds" folder next to index.html)
-const SFX={err:'sounds/error.mp3',win:'sounds/fart-with-extra-reverb.mp3',die:['sounds/ahh(quack).mp3','sounds/bark_fart.mp3','sounds/faaah.mp3','sounds/fart.mp3']};
+const SFX={err:'error.mp3',win:'fart-with-extra-reverb.mp3',die:['ahh(quack).mp3','bark_fart.mp3','faaah.mp3','fart.mp3']};
 // error.mp3 plays on EVERY death. Set DEATH_VOICES to true to also play one of the funny voices from SFX.die.
 const DEATH_VOICES=false;
 let lastDs=-1;
