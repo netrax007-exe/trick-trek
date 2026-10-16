@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>Trick Trek</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23141f45'/%3E%3Ccircle cx='42' cy='22' r='11' fill='%23f6f1d5'/%3E%3Cpath d='M6 54 24 26l10 14 6-8 18 22z' fill='%237fa3cc'/%3E%3Cpath d='M24 26l-6 10 6-3 5 4z' fill='%23fff'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#0b1026">
+<meta name="description" content="Trick Trek: a tiny platformer where you should trust nothing.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="scene"><div class="bg stars"></div><div class="bg moon"></div><svg class="bg mts" viewBox="0 0 800 270" preserveAspectRatio="none" aria-hidden="true"><path class="m1" d="M0 270V170l70-70 60 52 80-110 90 120 70-60 100 90 90-100 110 120 70-40 60 40v66z"/><path class="m2" d="M0 270V215l90-60 70 50 100-90 90 100 80-50 110 70 90-60 70 50L800 215V270z"/></svg></div>
+<canvas id="g"></canvas>
+<div id="ov">
+<div class="bg stars"></div><div class="bg moon"></div>
+<svg class="bg mts" viewBox="0 0 800 270" preserveAspectRatio="none" aria-hidden="true"><path d="M0 270V170l70-70 60 52 80-110 90 120 70-60 100 90 90-100 110 120 70-40 60 40v66z" fill="#26335f"/><path d="M0 270V215l90-60 70 50 100-90 90 100 80-50 110 70 90-60 70 50L800 215V270z" fill="#161f40"/></svg>
+<h1 id="t">Trick Trek</h1>
+<p id="s">Kisi chiz pe bharosa nahi karne ka bhidu</p>
+<p class="how">Arrow keys or WASD, Space to jump.<br>On a phone, use the on-screen buttons.</p>
+<input id="un" maxlength="14" placeholder="Enter your name" autocomplete="off">
+<p id="best"></p>
+<button id="b">Start</button>
+</div>
+<div id="rot"><div class="ph"></div><p>Phone ko landscape me ghumao</p><p class="sm">Rotate your phone sideways to play</p></div>
+<button id="mu">Sound on</button>
+
+<div id="tc"><div class="grp"><div class="b" id="bl">&#9664;</div><div class="b" id="br">&#9654;</div><div class="b" id="bu">&#9650;</div><div class="b" id="bd">&#9660;</div></div><span class="sp"></span><div class="b" id="bj">JMP</div></div>
+<script src="game.js"></script>
+</body>
+</html>
